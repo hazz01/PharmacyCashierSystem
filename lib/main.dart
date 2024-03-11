@@ -33,7 +33,7 @@ class RootPage extends StatefulWidget {
 
 class _RootPageState extends State<RootPage> {
   int currentPage = 0;
-  List<Widget> pages = const [Mobile_Dashboard(),Mobile_terlaris(), Mobile_Kosong(), Mobile_Jatuh_Tempo()];
+  List<Widget> pages = const [Mobile_Dashboard(),MobileTerlaris(), Mobile_Kosong(), Mobile_Jatuh_Tempo()];
 
   @override
   Widget build(BuildContext context) {
