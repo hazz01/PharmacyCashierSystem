@@ -1,13 +1,13 @@
 import 'package:apotek/mobile_dashboard.dart';
 import 'package:flutter/material.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: LoginPage(),
     );
   }
@@ -19,9 +19,10 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-    // Add your username and password variables
+  // Add your username and password variables
   final String correctUsername = "admin"; // Replace with the correct username
-  final String correctPassword = "password"; // Replace with the correct password
+  final String correctPassword =
+      "password"; // Replace with the correct password
 
   // Controller for the text fields
   TextEditingController usernameController = TextEditingController();
@@ -33,14 +34,14 @@ class _LoginPageState extends State<LoginPage> {
     String enteredPassword = passwordController.text;
 
     // Check if the entered username and password are correct
-    if (enteredUsername == correctUsername && enteredPassword == correctPassword) {
+    if (enteredUsername == correctUsername &&
+        enteredPassword == correctPassword) {
       // Navigate to Mobile_Dashboard
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => Mobile_Dashboard()),
       );
       print('Login Berhasil');
-
     } else {
       print('Login Gagal');
       print('Username: $enteredUsername');
@@ -50,16 +51,11 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-              // title: const Text('Apotek'),
-              automaticallyImplyLeading: false,
-            ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(60.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -149,7 +145,7 @@ class _LoginPageState extends State<LoginPage> {
               bottom: 10,
 
               child: Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: EdgeInsets.only(top: 450),
                 child: Text(
                   'Copyright 2024 Grounded Team. All Right Reserved',
                   style: TextStyle(fontSize: 12.0),
