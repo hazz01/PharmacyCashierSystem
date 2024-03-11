@@ -41,20 +41,9 @@ class _RootPageState extends State<RootPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: currentPage == 0
-          ? null  // Hide the AppBar on the login screen
-          : AppBar(
-              title: const Text('Apotek'),
+      appBar: AppBar(
+              // title: const Text('Apotek'),
               automaticallyImplyLeading: false,
-              centerTitle: true,
-              actions: [
-                IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.notifications_active_rounded)),
-                IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.account_box_rounded)),
-              ],
             ),
       body: pages[currentPage],
       

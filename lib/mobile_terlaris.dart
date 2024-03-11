@@ -50,6 +50,16 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
       // appBar: AppBar(
       //   title: const Text('Mobile Terlaris'),
       // ),
+      appBar: AppBar(
+        title: const Text('Apotek'),
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+        actions: [
+          IconButton(
+              onPressed: () {}, icon: Icon(Icons.notifications_active_rounded)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.account_box_rounded)),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
@@ -184,8 +194,8 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                           _selectedItem = newValue;
                         });
                       },
-                      items:
-                          _itemList.map<DropdownMenuItem<String>>((String value) {
+                      items: _itemList
+                          .map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
                           value: value,
                           child: Text(value),
@@ -215,8 +225,8 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                           _selectedType = newValue;
                         });
                       },
-                      items:
-                          _typeList.map<DropdownMenuItem<String>>((String value) {
+                      items: _typeList
+                          .map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
                           value: value,
                           child: Text(value),
@@ -280,7 +290,9 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                   ),
                 ],
               ),
-              const SizedBox(height: 40,),
+              const SizedBox(
+                height: 40,
+              ),
               ElevatedButton(
                 onPressed: _selectedKategori != null &&
                         _selectedGolongan != null &&
@@ -291,8 +303,8 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                 child: const Text('Lihat Laporan'),
               ),
               SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Container(child: TableExample()))
+                  scrollDirection: Axis.horizontal,
+                  child: Container(child: TableExample()))
             ],
           ),
         ),
