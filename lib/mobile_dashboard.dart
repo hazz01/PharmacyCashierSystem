@@ -1,3 +1,6 @@
+import 'package:apotek/main.dart';
+import 'package:apotek/mobile_terlaris.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class Mobile_Dashboard extends StatefulWidget {
@@ -8,6 +11,10 @@ class Mobile_Dashboard extends StatefulWidget {
 }
 
 class _Mobile_DashboardState extends State<Mobile_Dashboard> {
+
+  int currentPage = 0;
+  // List<Widget> pages = [Mobile_Dashboard(), MobileTerlaris()];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -279,7 +286,19 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
           ),
           ],
         ),
-      )
+      ),
+      bottomNavigationBar: BottomNavBarRaisedInsetFb1(
+        currentPage: currentPage,
+        onPageChanged: (index) {
+          setState(() {
+            currentPage = index;
+            if (kDebugMode) {
+              print("currentPage: $currentPage");
+            }
+          });
+        },
+      ),
     );
+    
   }
 }

@@ -1,3 +1,5 @@
+import 'package:apotek/main.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -43,6 +45,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
 
   @override
   Widget build(BuildContext context) {
+    int currentPage = 0;
     return Scaffold(
       // appBar: AppBar(
       //   title: const Text('Mobile Terlaris'),
@@ -293,6 +296,17 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavBarRaisedInsetFb1(
+        currentPage: currentPage,
+        onPageChanged: (index) {
+          setState(() {
+            currentPage = index;
+            if (kDebugMode) {
+              print("currentPage: $currentPage");
+            }
+          });
+        },
       ),
     );
   }
