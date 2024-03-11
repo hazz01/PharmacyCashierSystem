@@ -1,5 +1,6 @@
 import 'package:apotek/main.dart';
 import 'package:apotek/mobile_terlaris.dart';
+import 'package:draggable_home/draggable_home.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -16,8 +17,87 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
+    return DraggableHome(
+      leading: const Icon(Icons.arrow_back_ios),
+      title: const Text("Chasier System"),
+      actions: [
+        IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
+      ],
+      headerWidget: headerWidget(context),
+      headerBottomBar: headerBottomBarWidget(),
+      body: [
+        dashboardView(),
+      ],
+      fullyStretchable: false,
+      expandedBody: const Mobile_Dashboard(),
+      backgroundColor: Colors.white,
+      appBarColor: Colors.orange,
+      bottomNavigationBar: BottomNavBarRaisedInsetFb1(
+        currentPage: currentPage,
+        onPageChanged: (index) {
+          setState(() {
+            currentPage = index;
+            if (kDebugMode) {
+              print("currentPage: $currentPage");
+            }
+          });
+        },
+      ),
+    );
+  }
+
+  Row headerBottomBarWidget() {
+    return const Row(
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Icon(
+          Icons.settings,
+          color: Colors.white,
+        ),
+      ],
+    );
+  }
+
+  Widget headerWidget(BuildContext context) {
+    return Container(
+      color: Colors.blue,
+      child: Center(
+        child: Text(
+          "Title",
+          style: Theme.of(context)
+              .textTheme
+              .displayMedium!
+              .copyWith(color: Colors.white70),
+        ),
+      ),
+    );
+  }
+
+  
+
+  ListView listView() {
+    return ListView.builder(
+      padding: const EdgeInsets.only(top: 0),
+      physics: const NeverScrollableScrollPhysics(),
+      itemCount: 20,
+      shrinkWrap: true,
+      itemBuilder: (context, index) => Card(
+        color: Colors.white70,
+        child: ListTile(
+          leading: CircleAvatar(
+            child: Text("$index"),
+          ),
+          title: const Text("Title"),
+          subtitle: const Text("Subtitle"),
+        ),
+      ),
+    );
+  }
+  
+  dashboardView() {
+    return SingleChildScrollView(
         child: Column(
         children: [
           Container(
@@ -573,17 +653,6 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
         ],
       ),
       
-    ),
-    bottomNavigationBar: BottomNavBarRaisedInsetFb1(
-        currentPage: currentPage,
-        onPageChanged: (index) {
-          setState(() {
-            currentPage = index;
-            if (kDebugMode) {
-              print("currentPage: $currentPage");
-            }
-          });
-        },
-      ),);
+    );
   }
 }

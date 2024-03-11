@@ -62,9 +62,9 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             // [logo]
             Image.asset(
-              'assets/your_logo.png', // Ganti dengan path logo Anda
-              height: 100.0,
-              width: 100.0,
+              'images/logo.png', // Ganti dengan path logo Anda
+              height: 200.0,
+              width: 200.0,
             ),
 
             SizedBox(height: 20.0),
@@ -85,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
             // [text field] Masukkan Email
             TextField(
               controller: usernameController,
-              decoration: InputDecoration(labelText: 'Masukkan Email'),
+              decoration: InputDecoration(labelText: 'Masukkan Username'),
             ),
 
             const SizedBox(height: 10.0),
