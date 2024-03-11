@@ -17,8 +17,8 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Column(
+      body: SingleChildScrollView(
+        child: Column(
         children: [
           Container(
             padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -572,6 +572,18 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
           ),
         ],
       ),
-    ));
+      
+    ),
+    bottomNavigationBar: BottomNavBarRaisedInsetFb1(
+        currentPage: currentPage,
+        onPageChanged: (index) {
+          setState(() {
+            currentPage = index;
+            if (kDebugMode) {
+              print("currentPage: $currentPage");
+            }
+          });
+        },
+      ),);
   }
 }
