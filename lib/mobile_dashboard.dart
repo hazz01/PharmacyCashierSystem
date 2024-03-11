@@ -11,275 +11,561 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-              margin: const EdgeInsets.fromLTRB(40.0, 30.0, 40.0, 10.0),
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 136, 217, 255),
-                borderRadius: BorderRadius.circular(12.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    spreadRadius: 2,
-                    blurRadius: 4,
-                    offset: const Offset(0, 2),
-                  ),
-                ],
-              ),
-              child: Column(
-                children: [
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text.rich(
-                        TextSpan(
-                          text: 'Total Penjualan',
-                          style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w400
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // Margin
-                      Text.rich(
-                        TextSpan(
-                          text: 'Data diberbaharui [data]',
-                          style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.w400
-                          ),
-                        ),
-                      ),
-                    ],
-                  ), 
-                  const SizedBox(height: 20),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      
-                      Text.rich(
-                        TextSpan(
-                          text: 'Rp. --',
-                          style: TextStyle(
-                            fontSize: 30, fontWeight: FontWeight.w500
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 10,),
-                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        width: 65,
-                        height: 30,
-                        child:  TextButton(
-                          style: TextButton.styleFrom(backgroundColor: const Color.fromRGBO(246, 141, 41, 100), shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)
-                          )),
-                          onPressed: () {}, 
-                          child: const Text.rich(
-                          TextSpan(
-                            text: 'Harian',
-                            style: TextStyle(
-                              fontSize: 10, fontWeight: FontWeight.w500,
-                              color: Colors.white
-                            ),
-                          ),
-                        ),
-                      ),
-                      ),
-                      const SizedBox(width: 15,),
-                      SizedBox(
-                        width: 65,
-                        height: 30,
-                        child:  TextButton(
-                          style: TextButton.styleFrom(backgroundColor: const Color.fromRGBO(246, 141, 41, 100), shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)
-                          )),
-                          onPressed: () {}, 
-                          child: const Text.rich(
-                          TextSpan(
-                            text: 'Harian',
-                            style: TextStyle(
-                              fontSize: 10, fontWeight: FontWeight.w500,
-                              color: Colors.white
-                            ),
-                          ),
-                        ),
-                      ),
-                      ),
-                      const SizedBox(width: 15,),
-                      SizedBox(
-                        width: 65,
-                        height: 30,
-                        child:  TextButton(
-                          style: TextButton.styleFrom(backgroundColor: const Color.fromRGBO(246, 141, 41, 100), shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)
-                          )),
-                          onPressed: () {}, 
-                          child: const Text.rich(
-                          TextSpan(
-                            text: 'Harian',
-                            style: TextStyle(
-                              fontSize: 10, fontWeight: FontWeight.w500,
-                              color: Colors.white
-                            ),
-                          ),
-                        ),
-                      ),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-          ),
+        body: SingleChildScrollView(
+      child: Column(
+        children: [
           Container(
             padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-              margin: const EdgeInsets.fromLTRB(40.0, 10.0, 40.0, 10.0),
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 136, 217, 255),
-                borderRadius: BorderRadius.circular(12.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    spreadRadius: 2,
-                    blurRadius: 4,
-                    offset: const Offset(0, 2),
-                  ),
-                ],
-              ),
-              child: const Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text.rich(
-                        TextSpan(
-                          text: 'Total Hutang',
-                          style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w400
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // Margin
-                      Text.rich(
-                        TextSpan(
-                          text: 'Data diberbaharui [data]',
-                          style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.w400
-                          ),
-                        ),
-                      ),
-                    ],
-                  ), 
-                  SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      
-                      Text.rich(
-                        TextSpan(
-                          text: 'Rp. --',
-                          style: TextStyle(
-                            fontSize: 30, fontWeight: FontWeight.w500
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-          ),
-          Container(
-            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-            margin: const EdgeInsets.fromLTRB(40.0, 10.0, 40.0, 40.0),
+            margin: const EdgeInsets.fromLTRB(40.0, 30.0, 40.0, 10.0),
             decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 136, 217, 255),
+              color: Colors.white,
               borderRadius: BorderRadius.circular(12.0),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.2),
-                  spreadRadius: 2,
-                  blurRadius: 4,
+                  color: Colors.black.withOpacity(0.1),
+                  spreadRadius: 0,
+                  blurRadius: 5,
                   offset: const Offset(0, 2),
                 ),
               ],
             ),
-            child: SingleChildScrollView(  // Wrap the DataTable with SingleChildScrollView
-              scrollDirection: Axis.horizontal,  // Allow horizontal scrolling
-              child: Column(
-                children: [
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text.rich(
-                        TextSpan(
-                          text: 'Item Terlaris',
-                          style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w400
+            child: Column(
+              children: [
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text.rich(
+                      TextSpan(
+                        text: 'Total Penjualan',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black54),
+                      ),
+                    ),
+                  ],
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    // Margin
+                    Text.rich(
+                      TextSpan(
+                        text: 'Data diberbaharui [data]',
+                        style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text.rich(
+                      TextSpan(
+                        text: 'Rp. --',
+                        style: TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 86,
+                      height: 30,
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                            backgroundColor: Colors.orange,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(5))),
+                        onPressed: () {},
+                        child: const Text.rich(
+                          TextSpan(
+                            text: 'Harian',
+                            style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white),
                           ),
                         ),
                       ),
-                    ],
-                  ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // Margin
-                      Text.rich(
-                        TextSpan(
-                          text: 'Data diberbaharui [data]',
-                          style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.w400
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    SizedBox(
+                      width: 86,
+                      height: 30,
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                            backgroundColor: Colors.grey,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(5))),
+                        onPressed: () {},
+                        child: const Text.rich(
+                          TextSpan(
+                            text: 'Mingguan',
+                            style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white),
                           ),
                         ),
                       ),
-                    ],
-                  ), 
-                  const SizedBox(height: 20),
-                  DataTable(
-                    headingRowHeight: 40,
-                    columnSpacing: 4,
-                    horizontalMargin: 2,
-                    columns: const [
-                      DataColumn(label: Text('Nama Barang', style: TextStyle(fontSize: 10),),),
-                      DataColumn(label: Text('Nama Barang', style: TextStyle(fontSize: 10),),),
-                      DataColumn(label: Text('Nama Barang', style: TextStyle(fontSize: 10),),),
-                    ],
-                    rows: const [
-                      DataRow( cells: [
-                        DataCell(Text('Barang 1', style: TextStyle(fontSize: 10))),
-                        DataCell(Text('Deskripsi Barang 1 Barang 1 Barang 1', style: TextStyle(fontSize: 10))),
-                        DataCell(Text('Deskripsi Barang 1', style: TextStyle(fontSize: 10))),
-                      ]),
-                      DataRow(cells: [
-                        DataCell(Text('Barang 2', style: TextStyle(fontSize: 10))),
-                        DataCell(Text('Deskripsi Barang 2', style: TextStyle(fontSize: 10))),
-                        DataCell(Text('Deskripsi Barang 2', style: TextStyle(fontSize: 10))),
-                      ]),
-                      // Tambahkan baris lain sesuai kebutuhan
-                    ],
-                  )
-                ],
-              ),
+                    ),
+                    const SizedBox(
+                      width: 15,
+                    ),
+                    SizedBox(
+                      width: 86,
+                      height: 30,
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                            backgroundColor: Colors.grey,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(5))),
+                        onPressed: () {},
+                        child: const Text.rich(
+                          TextSpan(
+                            text: 'Harian',
+                            style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                )
+              ],
             ),
           ),
-          ],
-        ),
-      )
-    );
+          Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            margin: const EdgeInsets.fromLTRB(40.0, 10.0, 40.0, 10.0),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.1),
+                  spreadRadius: 0,
+                  blurRadius: 5,
+                  offset: const Offset(0, 2),
+                ),
+              ],
+            ),
+            child: const Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text.rich(
+                      TextSpan(
+                        text: 'Total Hutang',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black54),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    // Margin
+                    Text.rich(
+                      TextSpan(
+                        text: 'Data diberbaharui [data]',
+                        style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text.rich(
+                      TextSpan(
+                        text: 'Rp. --',
+                        style: TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            margin: const EdgeInsets.fromLTRB(40.0, 10.0, 40.0, 10.0),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.1),
+                  spreadRadius: 0,
+                  blurRadius: 5,
+                  offset: const Offset(0, 2),
+                ),
+              ],
+            ),
+            // Wrap the DataTable with SingleChildScrollView
+
+            child: Column(
+              children: [
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text.rich(
+                      TextSpan(
+                        text: 'Item Terlaris',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black54),
+                      ),
+                    ),
+                  ],
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    // Margin
+                    Text.rich(
+                      TextSpan(
+                        text: 'Data diberbaharui [data]',
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black54),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                DataTable(
+                  headingRowHeight: 25,
+                  columnSpacing: 65,
+                  horizontalMargin: 2,
+                  columns: const [
+                    DataColumn(
+                      label: Text(
+                        'Item',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    DataColumn(
+                      label: Text(
+                        'Quantity',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    DataColumn(
+                      label: Text(
+                        'Harga',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                  ],
+                  rows: const [
+                    DataRow(cells: [
+                      DataCell(
+                          Text('Barang 1', style: TextStyle(fontSize: 10))),
+                      DataCell(Text('Jumlah', style: TextStyle(fontSize: 10))),
+                      DataCell(
+                          Text('Rp 25.000', style: TextStyle(fontSize: 10))),
+                    ]),
+                    DataRow(cells: [
+                      DataCell(
+                          Text('Barang 2', style: TextStyle(fontSize: 10))),
+                      DataCell(Text('Jumlah', style: TextStyle(fontSize: 10))),
+                      DataCell(
+                          Text('Rp 50.000', style: TextStyle(fontSize: 10))),
+                    ]),
+
+                    // Tambahkan baris lain sesuai kebutuhan
+                  ],
+                ),
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  SizedBox(
+                    width: 280,
+                    height: 29,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5))),
+                      onPressed: () {},
+                      child: const Text.rich(
+                        TextSpan(
+                          text: ' See Details',
+                          style: TextStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                ])
+              ],
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            margin: const EdgeInsets.fromLTRB(40.0, 10.0, 40.0, 10.0),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.1),
+                  spreadRadius: 0,
+                  blurRadius: 5,
+                  offset: const Offset(0, 2),
+                ),
+              ],
+            ),
+            // Wrap the DataTable with SingleChildScrollView
+
+            child: Column(
+              children: [
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text.rich(
+                      TextSpan(
+                        text: 'Barang Jatuh Tempo',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black54),
+                      ),
+                    ),
+                  ],
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    // Margin
+                    Text.rich(
+                      TextSpan(
+                        text: 'Data diberbaharui [data]',
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black54),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                DataTable(
+                  headingRowHeight: 25,
+                  columnSpacing: 65,
+                  horizontalMargin: 2,
+                  columns: const [
+                    DataColumn(
+                      label: Text(
+                        'Tagihan',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    DataColumn(
+                      label: Text(
+                        'Keterangan',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    DataColumn(
+                      label: Text(
+                        'Tanggal',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                  ],
+                  rows: const [
+                    DataRow(cells: [
+                      DataCell(
+                          Text('Tagihan 1', style: TextStyle(fontSize: 10))),
+                      DataCell(
+                          Text('Keterangan', style: TextStyle(fontSize: 10))),
+                      DataCell(
+                          Text('10/20/2021', style: TextStyle(fontSize: 10))),
+                    ]),
+                    DataRow(cells: [
+                      DataCell(
+                          Text('Tagihan 2', style: TextStyle(fontSize: 10))),
+                      DataCell(Text('Jumlah', style: TextStyle(fontSize: 10))),
+                      DataCell(
+                          Text('20/12/2022', style: TextStyle(fontSize: 10))),
+                    ]),
+
+                    // Tambahkan baris lain sesuai kebutuhan
+                  ],
+                ),
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  SizedBox(
+                    width: 280,
+                    height: 29,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5))),
+                      onPressed: () {},
+                      child: const Text.rich(
+                        TextSpan(
+                          text: ' See Details',
+                          style: TextStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                ])
+              ],
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            margin: const EdgeInsets.fromLTRB(40.0, 10.0, 40.0, 10.0),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.1),
+                  spreadRadius: 0,
+                  blurRadius: 5,
+                  offset: const Offset(0, 2),
+                ),
+              ],
+            ),
+            // Wrap the DataTable with SingleChildScrollView
+
+            child: Column(
+              children: [
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text.rich(
+                      TextSpan(
+                        text: 'Barang Kosong',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black54),
+                      ),
+                    ),
+                  ],
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    // Margin
+                    Text.rich(
+                      TextSpan(
+                        text: 'Data diberbaharui [data]',
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black54),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                DataTable(
+                  headingRowHeight: 25,
+                  columnSpacing: 65,
+                  horizontalMargin: 2,
+                  columns: const [
+                    DataColumn(
+                      label: Text(
+                        'Item',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    DataColumn(
+                      label: Text(
+                        'Jumlah',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    DataColumn(
+                      label: Text(
+                        'Tanggal',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                  ],
+                  rows: const [
+                    DataRow(cells: [
+                      DataCell(
+                          Text('Tagihan 1', style: TextStyle(fontSize: 10))),
+                      DataCell(Text('2', style: TextStyle(fontSize: 10))),
+                      DataCell(
+                          Text('10/20/2021', style: TextStyle(fontSize: 10))),
+                    ]),
+                    DataRow(cells: [
+                      DataCell(
+                          Text('Tagihan 2', style: TextStyle(fontSize: 10))),
+                      DataCell(Text('4', style: TextStyle(fontSize: 10))),
+                      DataCell(
+                          Text('20/12/2022', style: TextStyle(fontSize: 10))),
+                    ]),
+
+                    // Tambahkan baris lain sesuai kebutuhan
+                  ],
+                ),
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  SizedBox(
+                    width: 280,
+                    height: 29,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5))),
+                      onPressed: () {},
+                      child: const Text.rich(
+                        TextSpan(
+                          text: ' See Details',
+                          style: TextStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                ])
+              ],
+            ),
+          ),
+        ],
+      ),
+    ));
   }
 }
