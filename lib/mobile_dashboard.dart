@@ -63,20 +63,44 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
     );
   }
 
-  Widget headerWidget(BuildContext context) {
-    return Container(
-      color: Colors.blue,
-      child: Center(
-        child: Text(
-          "Title",
-          style: Theme.of(context)
-              .textTheme
-              .displayMedium!
-              .copyWith(color: Colors.white70),
+Widget headerWidget(BuildContext context) {
+  return Container(
+    decoration: BoxDecoration(
+      image: DecorationImage(
+        image: AssetImage('images/background.jpg'), // Ganti dengan path gambar Anda
+        fit: BoxFit.cover, // Atur sesuai kebutuhan (contohnya, sesuaikan atau perbesar gambar)
+        colorFilter: ColorFilter.mode(
+          Colors.black.withOpacity(0.4), // Sesuaikan tingkat kegelapan di sini
+          BlendMode.darken,
         ),
       ),
-    );
-  }
+    ),
+    child: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "74%",
+            style: Theme.of(context)
+                .textTheme
+                .displayMedium!
+                .copyWith(color: Colors.white),
+          ),
+          SizedBox(height: 8),
+          Text(
+            "pendapatan anda naik",
+            style: TextStyle(
+              color: Colors.white70,
+              fontSize: 12,
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+
 
   ListView listView() {
     return ListView.builder(
