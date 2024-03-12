@@ -67,20 +67,23 @@ class _LoginPageState extends State<LoginPage> {
               width: 200.0,
             ),
 
-            SizedBox(height: 20.0),
+            // SizedBox(height: 10.0),
 
             // Selamat Datang!
             const Text(
               'Selamat Datang!',
               style: TextStyle(
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
+                fontSize: 30.0,
+                fontWeight: FontWeight.w600,
               ),
             ),
 
-            const Text('Masuk Untuk Melanjutkan'),
+            const Text(
+              'Masuk Untuk Melanjutkan',
+              style: TextStyle(fontSize: 16),
+            ),
 
-            const SizedBox(height: 20.0),
+            const SizedBox(height: 60.0),
 
             // [text field] Masukkan Email
             TextField(
@@ -97,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
               obscureText: true,
             ),
 
-            const SizedBox(height: 10.0),
+            const SizedBox(height: 20.0),
 
             // [CheckBox] Ingat Kata Sandi
             Row(
@@ -137,7 +140,7 @@ class _LoginPageState extends State<LoginPage> {
               child: const Text('Masuk'),
             ),
 
-            const SizedBox(height: 20.0),
+            const SizedBox(height: 170.0),
 
             // [Footer] Copyright 2024 Grounded Team. All Right Reserved
             const Positioned(

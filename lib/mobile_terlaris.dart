@@ -51,9 +51,10 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
       //   title: const Text('Mobile Terlaris'),
       // ),
       appBar: AppBar(
-        title: const Text('Apotek'),
+        title: const Text('Barang Terlaris'),
         automaticallyImplyLeading: false,
         centerTitle: true,
+        backgroundColor: Colors.orange,
         actions: [
           IconButton(
               onPressed: () {}, icon: Icon(Icons.notifications_active_rounded)),
@@ -66,33 +67,34 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
           margin: const EdgeInsets.all(12),
           child: Column(
             children: [
-              RichText(
-                text: const TextSpan(
-                  text: 'Hello ',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                  // children: const <TextSpan>[
-                  //   TextSpan(text: 'bold', style: TextStyle(fontWeight: FontWeight.bold)),
-                  //   TextSpan(text: ' world!'),
-                  // ],
-                ),
-              ),
               Row(
                 children: [
                   const Text(
                     'Category: ',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
+                    style: TextStyle(
+                        fontSize: 19,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black54),
                   ),
                   const SizedBox(
-                    width: 35,
+                    width: 27,
                   ),
                   Expanded(
                     child: DropdownButtonFormField<String>(
+                      style: const TextStyle(
+                          color: Colors.black54,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
                       value: _selectedKategori,
                       onChanged: (String? newValue) {
                         setState(() {
                           _selectedKategori = newValue;
                         });
                       },
+                      decoration: const InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.orange)),
+                      ),
                       items: _kategoriList
                           .map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
@@ -111,19 +113,30 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                 children: [
                   const Text(
                     'Golongan: ',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
+                    style: TextStyle(
+                        fontSize: 19,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black54),
                   ),
                   const SizedBox(
                     width: 22,
                   ),
                   Expanded(
                     child: DropdownButtonFormField<String>(
+                      style: const TextStyle(
+                          color: Colors.black54,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
                       value: _selectedGolongan,
                       onChanged: (String? newValue) {
                         setState(() {
                           _selectedGolongan = newValue;
                         });
                       },
+                      decoration: const InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.orange)),
+                      ),
                       items: _golonganList
                           .map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
@@ -142,7 +155,10 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                 children: [
                   const Text(
                     'Start Date: ',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
+                    style: TextStyle(
+                        fontSize: 19,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black54),
                   ),
                   const SizedBox(width: 18),
                   Expanded(
@@ -167,8 +183,14 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                         }
                       },
                       decoration: const InputDecoration(
+                        focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.orange)),
                         labelText: 'Tanggal',
                         border: OutlineInputBorder(),
+                        labelStyle: TextStyle(
+                          color: Colors
+                              .black54, // Change the color of the label text here
+                        ),
                       ),
                     ),
                   ),
@@ -181,19 +203,30 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                 children: [
                   const Text(
                     'Item: ',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
+                    style: TextStyle(
+                        fontSize: 19,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black54),
                   ),
                   const SizedBox(
                     width: 60,
                   ),
                   Expanded(
                     child: DropdownButtonFormField<String>(
+                      style: const TextStyle(
+                          color: Colors.black54,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
                       value: _selectedItem,
                       onChanged: (String? newValue) {
                         setState(() {
                           _selectedItem = newValue;
                         });
                       },
+                      decoration: const InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.orange)),
+                      ),
                       items: _itemList
                           .map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
@@ -219,12 +252,20 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                   ),
                   Expanded(
                     child: DropdownButtonFormField<String>(
+                      style: const TextStyle(
+                          color: Colors.black54,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
                       value: _selectedType,
                       onChanged: (String? newValue) {
                         setState(() {
                           _selectedType = newValue;
                         });
                       },
+                      decoration: const InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.orange)),
+                      ),
                       items: _typeList
                           .map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
@@ -246,12 +287,20 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                   ),
                   Expanded(
                     child: DropdownButtonFormField<String>(
+                      style: const TextStyle(
+                          color: Colors.black54,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
                       value: _selectedActive,
                       onChanged: (String? newValue) {
                         setState(() {
                           _selectedActive = newValue;
                         });
                       },
+                      decoration: const InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.orange)),
+                      ),
                       items: _activeList
                           .map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
@@ -273,12 +322,20 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                   ),
                   Expanded(
                     child: DropdownButtonFormField<String>(
+                      style: const TextStyle(
+                          color: Colors.black54,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
                       value: _selectedCosign,
                       onChanged: (String? newValue) {
                         setState(() {
                           _selectedCosign = newValue;
                         });
                       },
+                      decoration: const InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.orange)),
+                      ),
                       items: _cosignList
                           .map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
@@ -291,7 +348,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                 ],
               ),
               const SizedBox(
-                height: 40,
+                height: 32,
               ),
               ElevatedButton(
                 onPressed: _selectedKategori != null &&
@@ -300,6 +357,10 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                         _selectedItem != null
                     ? _showReport
                     : null,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.orange, // Ubah warna latar belakang
+                  // Ubah warna teks
+                ),
                 child: const Text('Lihat Laporan'),
               ),
               SingleChildScrollView(
@@ -376,9 +437,18 @@ class _TableExampleState extends State<TableExample> {
             rows: rows,
           ),
           SizedBox(height: 16.0),
-          ElevatedButton(
-            onPressed: addRow,
-            child: Text('Add Row'),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.orange, // Ubah warna latar belakang
+                  // Ubah warna teks
+                ),
+                onPressed: addRow,
+                child: const Text('Add Row'),
+              ),
+            ],
           ),
         ],
       ),

@@ -19,7 +19,7 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
   Widget build(BuildContext context) {
     return DraggableHome(
       leading: const Icon(Icons.arrow_back_ios),
-      title: const Text("Chasier System"),
+      title: const Text("Dash Board"),
       actions: [
         IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
       ],
@@ -75,8 +75,6 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
     );
   }
 
-  
-
   ListView listView() {
     return ListView.builder(
       padding: const EdgeInsets.only(top: 0),
@@ -95,10 +93,10 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
       ),
     );
   }
-  
+
   dashboardView() {
     return SingleChildScrollView(
-        child: Column(
+      child: Column(
         children: [
           Container(
             padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -399,7 +397,13 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
                           backgroundColor: Colors.orange,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5))),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MobileTerlaris(),
+                            ));
+                      },
                       child: const Text.rich(
                         TextSpan(
                           text: ' See Details',
@@ -652,18 +656,6 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
           ),
         ],
       ),
-      
     );
   }
 }
-
-// - - - - - - - - - - - - Instructions - - - - - - - - - - - - - -
-// Place AppBarFb1 inside the app bar property of a Scaffold
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-
-
-// - - - - - - - - - - - - Instructions - - - - - - - - - - - - - -
-// Place AppBarFb1 inside the app bar property of a Scaffold
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
