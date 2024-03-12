@@ -179,6 +179,7 @@ class _BottomNavBarRaisedInsetFb1State
                       // print("currentPage: $widget.onPageChanged");
                       widget.onPageChanged == 1;
                     });
+
                     Navigator.push(
                       context,
                       PageRouteBuilder(

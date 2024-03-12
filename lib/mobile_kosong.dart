@@ -15,5 +15,4 @@ class _Mobile_KosongState extends State<Mobile_Kosong> {
     // TODO: implement build
     throw UnimplementedError();
   }
-
 }
