@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(60.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -142,12 +142,11 @@ class _LoginPageState extends State<LoginPage> {
             // [Footer] Copyright 2024 Grounded Team. All Right Reserved
             const Positioned(
               // alignment: Alignment.bottomCenter,
-              bottom: 10,
-
+              // bottom: 10,
               child: Padding(
-                padding: EdgeInsets.only(top: 450),
+                padding: EdgeInsets.only(top: 200),
                 child: Text(
-                  'Copyright 2024 Grounded Team. All Right Reserved',
+                  '© Copyright 2024 Grounded Team. All Right Reserved',
                   style: TextStyle(fontSize: 12.0),
                 ),
               ),

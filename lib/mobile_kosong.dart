@@ -12,8 +12,6 @@ class Mobile_Kosong extends StatefulWidget {
 class _Mobile_KosongState extends State<Mobile_Kosong> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Container();
   }
-
 }

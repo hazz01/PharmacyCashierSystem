@@ -339,3 +339,21 @@ class NavBarIcon extends StatelessWidget {
     );
   }
 }
+
+      // appBar: AppBar(
+      //   title: const Text(
+      //     "Pharmacy Cashier",
+      //     style: TextStyle(color: Colors.white),
+      //   ),
+      //   centerTitle: true, // Center the title
+      //   automaticallyImplyLeading: false, // Remove the default back button
+      //   backgroundColor: Color(0xff4338CA),
+      //   flexibleSpace: Container(
+      //     decoration: const BoxDecoration(
+      //       gradient: LinearGradient(
+      //         colors: [Color(0xff4338CA), Color(0xff6D28D9)],
+      //         stops: [0.5, 1.0],
+      //       ),
+      //     ),
+      //   ),
+      // ),

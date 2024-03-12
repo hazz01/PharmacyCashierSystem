@@ -656,3 +656,14 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
     );
   }
 }
+
+// - - - - - - - - - - - - Instructions - - - - - - - - - - - - - -
+// Place AppBarFb1 inside the app bar property of a Scaffold
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+// - - - - - - - - - - - - Instructions - - - - - - - - - - - - - -
+// Place AppBarFb1 inside the app bar property of a Scaffold
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
