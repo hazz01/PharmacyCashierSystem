@@ -51,15 +51,19 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
       //   title: const Text('Mobile Terlaris'),
       // ),
       appBar: AppBar(
-        title: const Text('Barang Terlaris'),
         automaticallyImplyLeading: false,
         centerTitle: true,
-        backgroundColor: Colors.orange,
-        actions: [
-          IconButton(
-              onPressed: () {}, icon: Icon(Icons.notifications_active_rounded)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.account_box_rounded)),
-        ],
+        title:
+            const Text("Flutter Bricks", style: TextStyle(color: Colors.white)),
+        backgroundColor: Color(0xff4338CA),
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0xff4338CA), Color(0xff6D28D9)],
+              stops: [0.5, 1.0],
+            ),
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -93,7 +97,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff4338CA))),
                       ),
                       items: _kategoriList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -135,7 +139,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff4338CA))),
                       ),
                       items: _golonganList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -184,7 +188,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff4338CA))),
                         labelText: 'Tanggal',
                         border: OutlineInputBorder(),
                         labelStyle: TextStyle(
@@ -225,7 +229,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff4338CA))),
                       ),
                       items: _itemList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -264,7 +268,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff4338CA))),
                       ),
                       items: _typeList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -299,7 +303,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff4338CA))),
                       ),
                       items: _activeList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -334,7 +338,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff4338CA))),
                       ),
                       items: _cosignList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -358,7 +362,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                     ? _showReport
                     : null,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.orange, // Ubah warna latar belakang
+                  backgroundColor: Color(0xff4338CA), // Ubah warna latar belakang
                   // Ubah warna teks
                 ),
                 child: const Text('Lihat Laporan'),
@@ -442,7 +446,7 @@ class _TableExampleState extends State<TableExample> {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.orange, // Ubah warna latar belakang
+                  backgroundColor: Color(0xff4338CA), // Ubah warna latar belakang
                   // Ubah warna teks
                 ),
                 onPressed: addRow,

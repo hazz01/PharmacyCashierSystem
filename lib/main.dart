@@ -1,8 +1,10 @@
 import 'package:apotek/addBarang.dart';
 import 'package:apotek/login.dart';
+import 'package:apotek/mobile_barang.dart';
 import 'package:apotek/mobile_dashboard.dart';
 import 'package:apotek/mobile_jatuhtempo.dart';
 import 'package:apotek/mobile_kosong.dart';
+import 'package:apotek/mobile_showdatabase.dart';
 import 'package:apotek/mobile_terlaris.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -175,7 +177,7 @@ class _BottomNavBarRaisedInsetFb1State
     Size size = MediaQuery.of(context).size;
     double height = 56;
 
-    const primaryColor = Colors.blue;
+    const primaryColor = Color(0xff4338CA);
     const secondaryColor = Colors.black54;
     const accentColor = const Color(0xffffffff);
     const backgroundColor = Colors.white;
@@ -257,7 +259,7 @@ class _BottomNavBarRaisedInsetFb1State
                       PageRouteBuilder(
                         transitionDuration: Duration.zero,
                         pageBuilder: (context, animation, secondaryAnimation) =>
-                            Mobile_Kosong(),
+                            ShowDatabase(),
                       ),
                     );
                   },
@@ -279,7 +281,7 @@ class _BottomNavBarRaisedInsetFb1State
                           transitionDuration: Duration.zero,
                           pageBuilder:
                               (context, animation, secondaryAnimation) =>
-                                  MobileTerlaris(),
+                                  Barang(),
                         ),
                       );
                     },

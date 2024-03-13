@@ -16,13 +16,12 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
 
   int currentPage = 0;
   // List<Widget> pages = [Mobile_Dashboard(), MobileTerlaris()];
-
   @override
   Widget build(BuildContext context) {
     
     return DraggableHome(
       leading: const Icon(Icons.arrow_back_ios),
-      title: const Text("Dash Board"),
+      title: const Text("Dashboard"),
       actions: [
         IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
       ],
@@ -34,7 +33,7 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
       fullyStretchable: false,
       expandedBody: const Mobile_Dashboard(),
       backgroundColor: Colors.white,
-      appBarColor: Colors.orange,
+      appBarColor: Color(0xff4338CA),
       bottomNavigationBar: BottomNavBarRaisedInsetFb1(
         currentPage: currentPage,
         onPageChanged: (index) {
@@ -151,8 +150,8 @@ Widget headerWidget(BuildContext context) {
                         text: 'Total Penjualan',
                         style: TextStyle(
                             fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.black54),
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black87),
                       ),
                     ),
                   ],
@@ -196,7 +195,7 @@ Widget headerWidget(BuildContext context) {
                       height: 30,
                       child: TextButton(
                         style: TextButton.styleFrom(
-                            backgroundColor: Colors.orange,
+                            backgroundColor: Color(0xff4338CA),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5))),
                         onPressed: () {},
@@ -288,7 +287,7 @@ Widget headerWidget(BuildContext context) {
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
-                            color: Colors.black54),
+                            color: Colors.black87),
                       ),
                     ),
                   ],
@@ -351,8 +350,8 @@ Widget headerWidget(BuildContext context) {
                         text: 'Item Terlaris',
                         style: TextStyle(
                             fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.black54),
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black87),
                       ),
                     ),
                   ],
@@ -373,48 +372,51 @@ Widget headerWidget(BuildContext context) {
                   ],
                 ),
                 const SizedBox(height: 20),
-                DataTable(
-                  headingRowHeight: 25,
-                  columnSpacing: 65,
-                  horizontalMargin: 2,
-                  columns: const [
-                    DataColumn(
-                      label: Text(
-                        'Item',
-                        style: TextStyle(fontSize: 10),
+                SizedBox(
+                  width: double.infinity,
+                  child: DataTable(
+                    headingRowHeight: 25,
+                    columnSpacing: 65,
+                    horizontalMargin: 2,
+                    columns: const [
+                      DataColumn(
+                        label: Text(
+                          'Item',
+                          style: TextStyle(fontSize: 10),
+                        ),
                       ),
-                    ),
-                    DataColumn(
-                      label: Text(
-                        'Quantity',
-                        style: TextStyle(fontSize: 10),
+                      DataColumn(
+                        label: Text(
+                          'Quantity',
+                          style: TextStyle(fontSize: 10),
+                        ),
                       ),
-                    ),
-                    DataColumn(
-                      label: Text(
-                        'Harga',
-                        style: TextStyle(fontSize: 10),
+                      DataColumn(
+                        label: Text(
+                          'Harga',
+                          style: TextStyle(fontSize: 10),
+                        ),
                       ),
-                    ),
-                  ],
-                  rows: const [
-                    DataRow(cells: [
-                      DataCell(
-                          Text('Barang 1', style: TextStyle(fontSize: 10))),
-                      DataCell(Text('Jumlah', style: TextStyle(fontSize: 10))),
-                      DataCell(
-                          Text('Rp 25.000', style: TextStyle(fontSize: 10))),
-                    ]),
-                    DataRow(cells: [
-                      DataCell(
-                          Text('Barang 2', style: TextStyle(fontSize: 10))),
-                      DataCell(Text('Jumlah', style: TextStyle(fontSize: 10))),
-                      DataCell(
-                          Text('Rp 50.000', style: TextStyle(fontSize: 10))),
-                    ]),
-
-                    // Tambahkan baris lain sesuai kebutuhan
-                  ],
+                    ],
+                    rows: const [
+                      DataRow(cells: [
+                        DataCell(
+                            Text('Barang 1', style: TextStyle(fontSize: 10))),
+                        DataCell(Text('Jumlah', style: TextStyle(fontSize: 10))),
+                        DataCell(
+                            Text('Rp 25.000', style: TextStyle(fontSize: 10))),
+                      ]),
+                      DataRow(cells: [
+                        DataCell(
+                            Text('Barang 2', style: TextStyle(fontSize: 10))),
+                        DataCell(Text('Jumlah', style: TextStyle(fontSize: 10))),
+                        DataCell(
+                            Text('Rp 50.000', style: TextStyle(fontSize: 10))),
+                      ]),
+                
+                      // Tambahkan baris lain sesuai kebutuhan
+                    ],
+                  ),
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   SizedBox(
@@ -422,7 +424,7 @@ Widget headerWidget(BuildContext context) {
                     height: 29,
                     child: TextButton(
                       style: TextButton.styleFrom(
-                          backgroundColor: Colors.orange,
+                          backgroundColor: Color(0xff4338CA),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5))),
                       onPressed: () {
@@ -475,7 +477,7 @@ Widget headerWidget(BuildContext context) {
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
-                            color: Colors.black54),
+                            color: Colors.black87),
                       ),
                     ),
                   ],
@@ -496,49 +498,52 @@ Widget headerWidget(BuildContext context) {
                   ],
                 ),
                 const SizedBox(height: 20),
-                DataTable(
-                  headingRowHeight: 25,
-                  columnSpacing: 65,
-                  horizontalMargin: 2,
-                  columns: const [
-                    DataColumn(
-                      label: Text(
-                        'Tagihan',
-                        style: TextStyle(fontSize: 10),
+                SizedBox(
+                  width: double.infinity,
+                  child: DataTable(
+                    headingRowHeight: 25,
+                    columnSpacing: 65,
+                    horizontalMargin: 2,
+                    columns: const [
+                      DataColumn(
+                        label: Text(
+                          'Tagihan',
+                          style: TextStyle(fontSize: 10),
+                        ),
                       ),
-                    ),
-                    DataColumn(
-                      label: Text(
-                        'Keterangan',
-                        style: TextStyle(fontSize: 10),
+                      DataColumn(
+                        label: Text(
+                          'Keterangan',
+                          style: TextStyle(fontSize: 10),
+                        ),
                       ),
-                    ),
-                    DataColumn(
-                      label: Text(
-                        'Tanggal',
-                        style: TextStyle(fontSize: 10),
+                      DataColumn(
+                        label: Text(
+                          'Tanggal',
+                          style: TextStyle(fontSize: 10),
+                        ),
                       ),
-                    ),
-                  ],
-                  rows: const [
-                    DataRow(cells: [
-                      DataCell(
-                          Text('Tagihan 1', style: TextStyle(fontSize: 10))),
-                      DataCell(
-                          Text('Keterangan', style: TextStyle(fontSize: 10))),
-                      DataCell(
-                          Text('10/20/2021', style: TextStyle(fontSize: 10))),
-                    ]),
-                    DataRow(cells: [
-                      DataCell(
-                          Text('Tagihan 2', style: TextStyle(fontSize: 10))),
-                      DataCell(Text('Jumlah', style: TextStyle(fontSize: 10))),
-                      DataCell(
-                          Text('20/12/2022', style: TextStyle(fontSize: 10))),
-                    ]),
-
-                    // Tambahkan baris lain sesuai kebutuhan
-                  ],
+                    ],
+                    rows: const [
+                      DataRow(cells: [
+                        DataCell(
+                            Text('Tagihan 1', style: TextStyle(fontSize: 10))),
+                        DataCell(
+                            Text('Keterangan', style: TextStyle(fontSize: 10))),
+                        DataCell(
+                            Text('10/20/2021', style: TextStyle(fontSize: 10))),
+                      ]),
+                      DataRow(cells: [
+                        DataCell(
+                            Text('Tagihan 2', style: TextStyle(fontSize: 10))),
+                        DataCell(Text('Jumlah', style: TextStyle(fontSize: 10))),
+                        DataCell(
+                            Text('20/12/2022', style: TextStyle(fontSize: 10))),
+                      ]),
+                
+                      // Tambahkan baris lain sesuai kebutuhan
+                    ],
+                  ),
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   SizedBox(
@@ -546,7 +551,7 @@ Widget headerWidget(BuildContext context) {
                     height: 29,
                     child: TextButton(
                       style: TextButton.styleFrom(
-                          backgroundColor: Colors.orange,
+                          backgroundColor: Color(0xff4338CA),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5))),
                       onPressed: () {},
@@ -593,7 +598,7 @@ Widget headerWidget(BuildContext context) {
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
-                            color: Colors.black54),
+                            color: Colors.black87),
                       ),
                     ),
                   ],
@@ -614,48 +619,51 @@ Widget headerWidget(BuildContext context) {
                   ],
                 ),
                 const SizedBox(height: 20),
-                DataTable(
-                  headingRowHeight: 25,
-                  columnSpacing: 65,
-                  horizontalMargin: 2,
-                  columns: const [
-                    DataColumn(
-                      label: Text(
-                        'Item',
-                        style: TextStyle(fontSize: 10),
+                SizedBox(
+                  width: double.infinity,
+                  child: DataTable(
+                    headingRowHeight: 25,
+                    columnSpacing: 65,
+                    horizontalMargin: 2,
+                    columns: const [
+                      DataColumn(
+                        label: Text(
+                          'Item',
+                          style: TextStyle(fontSize: 10),
+                        ),
                       ),
-                    ),
-                    DataColumn(
-                      label: Text(
-                        'Jumlah',
-                        style: TextStyle(fontSize: 10),
+                      DataColumn(
+                        label: Text(
+                          'Jumlah',
+                          style: TextStyle(fontSize: 10),
+                        ),
                       ),
-                    ),
-                    DataColumn(
-                      label: Text(
-                        'Tanggal',
-                        style: TextStyle(fontSize: 10),
+                      DataColumn(
+                        label: Text(
+                          'Tanggal',
+                          style: TextStyle(fontSize: 10),
+                        ),
                       ),
-                    ),
-                  ],
-                  rows: const [
-                    DataRow(cells: [
-                      DataCell(
-                          Text('Tagihan 1', style: TextStyle(fontSize: 10))),
-                      DataCell(Text('2', style: TextStyle(fontSize: 10))),
-                      DataCell(
-                          Text('10/20/2021', style: TextStyle(fontSize: 10))),
-                    ]),
-                    DataRow(cells: [
-                      DataCell(
-                          Text('Tagihan 2', style: TextStyle(fontSize: 10))),
-                      DataCell(Text('4', style: TextStyle(fontSize: 10))),
-                      DataCell(
-                          Text('20/12/2022', style: TextStyle(fontSize: 10))),
-                    ]),
-
-                    // Tambahkan baris lain sesuai kebutuhan
-                  ],
+                    ],
+                    rows: const [
+                      DataRow(cells: [
+                        DataCell(
+                            Text('Tagihan 1', style: TextStyle(fontSize: 10))),
+                        DataCell(Text('2', style: TextStyle(fontSize: 10))),
+                        DataCell(
+                            Text('10/20/2021', style: TextStyle(fontSize: 10))),
+                      ]),
+                      DataRow(cells: [
+                        DataCell(
+                            Text('Tagihan 2', style: TextStyle(fontSize: 10))),
+                        DataCell(Text('4', style: TextStyle(fontSize: 10))),
+                        DataCell(
+                            Text('20/12/2022', style: TextStyle(fontSize: 10))),
+                      ]),
+                
+                      // Tambahkan baris lain sesuai kebutuhan
+                    ],
+                  ),
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   SizedBox(
@@ -663,7 +671,7 @@ Widget headerWidget(BuildContext context) {
                     height: 29,
                     child: TextButton(
                       style: TextButton.styleFrom(
-                          backgroundColor: Colors.orange,
+                          backgroundColor: Color(0xff4338CA),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5))),
                       onPressed: () {},

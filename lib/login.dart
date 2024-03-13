@@ -57,6 +57,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: Center(
         child: Container(
+          alignment: Alignment.topCenter,
           constraints: BoxConstraints(maxWidth: 600),
           child: SingleChildScrollView(
             padding: const EdgeInsets.all(20.0),
@@ -137,11 +138,15 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 20.0),
         
                 // [Submit Button] Masuk
-                ElevatedButton(
-                  onPressed: () {
-                    _validateLogin();
-                  },
-                  child: const Text('Masuk'),
+                SizedBox(
+                  width: double.infinity,
+                  height: 40,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      _validateLogin();
+                    },
+                    child: const Text('Masuk', style: TextStyle(fontSize: 20),),
+                  ),
                 ),
                 
         

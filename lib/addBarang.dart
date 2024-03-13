@@ -41,15 +41,19 @@ class _addBarangState extends State<addBarang> {
     int currentPage = 0;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tambah Barang'),
         automaticallyImplyLeading: false,
         centerTitle: true,
-        backgroundColor: Colors.orange,
-        actions: [
-          IconButton(
-              onPressed: () {}, icon: Icon(Icons.notifications_active_rounded)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.account_box_rounded)),
-        ],
+        title:
+            const Text("Tambah Barang", style: TextStyle(color: Colors.white)),
+        backgroundColor: Color(0xff4338CA),
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0xff4338CA), Color(0xff6D28D9)],
+              stops: [0.5, 1.0],
+            ),
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         child: Container(
