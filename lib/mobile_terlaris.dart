@@ -72,7 +72,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                   const Text(
                     'Category: ',
                     style: TextStyle(
-                        fontSize: 19,
+                        fontSize: 18.5,
                         fontWeight: FontWeight.w700,
                         color: Colors.black54),
                   ),
@@ -114,7 +114,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                   const Text(
                     'Golongan: ',
                     style: TextStyle(
-                        fontSize: 19,
+                        fontSize: 18.5,
                         fontWeight: FontWeight.w700,
                         color: Colors.black54),
                   ),
@@ -156,7 +156,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                   const Text(
                     'Start Date: ',
                     style: TextStyle(
-                        fontSize: 19,
+                        fontSize: 18.5,
                         fontWeight: FontWeight.w700,
                         color: Colors.black54),
                   ),
@@ -204,7 +204,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                   const Text(
                     'Item: ',
                     style: TextStyle(
-                        fontSize: 19,
+                        fontSize: 18.5,
                         fontWeight: FontWeight.w700,
                         color: Colors.black54),
                   ),
@@ -363,13 +363,16 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                 ),
                 child: const Text('Lihat Laporan'),
               ),
-              SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
+              // ignore: avoid_unnecessary_containers
+              Container(
+
+                  // ignore: avoid_unnecessary_containers
                   child: Container(child: TableExample()))
             ],
           ),
         ),
       ),
+
       bottomNavigationBar: BottomNavBarRaisedInsetFb1(
         currentPage: currentPage,
         onPageChanged: (index) {
@@ -424,15 +427,33 @@ class _TableExampleState extends State<TableExample> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16.0),
+      width: 1000,
+      padding: const EdgeInsets.fromLTRB(0.0, 25.0, 0.0, 25.0),
+      margin: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12.0),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            spreadRadius: 0,
+            blurRadius: 5,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
       child: Column(
         children: [
           DataTable(
-            columns: [
-              DataColumn(label: Text('No')),
-              DataColumn(label: Text('Type')),
-              DataColumn(label: Text('Item Name')),
-              DataColumn(label: Text('Qty')),
+            headingRowHeight: 25,
+            columnSpacing: 40,
+            horizontalMargin: 0,
+            columns: const [
+              DataColumn(label: Text('No', style: TextStyle(fontSize: 14))),
+              DataColumn(label: Text('Type', style: TextStyle(fontSize: 14))),
+              DataColumn(
+                  label: Text('Item Name', style: TextStyle(fontSize: 14))),
+              DataColumn(label: Text('Qty', style: TextStyle(fontSize: 14))),
             ],
             rows: rows,
           ),

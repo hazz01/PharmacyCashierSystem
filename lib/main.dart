@@ -35,7 +35,6 @@ class SplashScreen extends StatefulWidget {
   _SplashScreenState createState() => _SplashScreenState();
 }
 
-
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
@@ -72,7 +71,6 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 }
 
-
 class RootPage extends StatefulWidget {
   const RootPage({super.key});
 
@@ -87,7 +85,9 @@ class _RootPageState extends State<RootPage> {
     LoginPage(),
     Mobile_Dashboard(),
     MobileTerlaris(),
-    addBarang()
+    addBarang(),
+    Mobile_Kosong(),
+    Mobile_Jatuh_Tempo()
   ];
 
   @override
@@ -175,7 +175,7 @@ class _BottomNavBarRaisedInsetFb1State
     Size size = MediaQuery.of(context).size;
     double height = 56;
 
-    const primaryColor = Colors.blue;
+    const primaryColor = Colors.orange;
     const secondaryColor = Colors.black54;
     const accentColor = const Color(0xffffffff);
     const backgroundColor = Colors.white;
@@ -201,7 +201,9 @@ class _BottomNavBarRaisedInsetFb1State
             heightFactor: 0.6,
             child: FloatingActionButton(
                 backgroundColor: primaryColor,
-                child: const Icon(Icons.home),
+                child: const Icon(
+                  Icons.home,
+                ),
                 elevation: 0.1,
                 onPressed: () {
                   setState(() {
@@ -279,7 +281,7 @@ class _BottomNavBarRaisedInsetFb1State
                           transitionDuration: Duration.zero,
                           pageBuilder:
                               (context, animation, secondaryAnimation) =>
-                                  MobileTerlaris(),
+                                  Mobile_Jatuh_Tempo(),
                         ),
                       );
                     },
