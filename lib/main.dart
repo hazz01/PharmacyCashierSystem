@@ -4,6 +4,7 @@ import 'package:apotek/mobile_jatuhtempo.dart';
 import 'package:apotek/mobile_kosong.dart';
 import 'package:apotek/mobile_terlaris.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,10 +22,55 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(),
+      home: SplashScreen(),
     );
   }
 }
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // Simulate some asynchronous operation (e.g., fetching data)
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => LoginPage()),
+      );
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blue, // Set your splash screen background color
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Add your logo or other splash screen content here
+            Image.asset('images/logo.png', width: 150, height: 150),
+            const SizedBox(height: 20),
+            // Loading animation using flutter_spinkit
+            SpinKitWave(
+              color: Colors.white,
+              size: 50.0,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 
 class RootPage extends StatefulWidget {
   const RootPage({super.key});
