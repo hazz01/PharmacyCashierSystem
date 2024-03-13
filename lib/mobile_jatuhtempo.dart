@@ -54,7 +54,7 @@ class _Mobile_Jatuh_TempoState extends State<Mobile_Jatuh_Tempo> {
         title: const Text('Barang Jatuh Tempo'),
         automaticallyImplyLeading: false,
         centerTitle: true,
-        backgroundColor: Colors.orange,
+        backgroundColor: Color(0xff6D28D9),
         actions: [
           IconButton(
               onPressed: () {}, icon: Icon(Icons.notifications_active_rounded)),
@@ -93,7 +93,7 @@ class _Mobile_Jatuh_TempoState extends State<Mobile_Jatuh_Tempo> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff6D28D9))),
                       ),
                       items: _kategoriList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -135,7 +135,7 @@ class _Mobile_Jatuh_TempoState extends State<Mobile_Jatuh_Tempo> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff6D28D9))),
                       ),
                       items: _golonganList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -184,7 +184,7 @@ class _Mobile_Jatuh_TempoState extends State<Mobile_Jatuh_Tempo> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff6D28D9))),
                         labelText: 'Tanggal',
                         border: OutlineInputBorder(),
                         labelStyle: TextStyle(
@@ -225,7 +225,7 @@ class _Mobile_Jatuh_TempoState extends State<Mobile_Jatuh_Tempo> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff6D28D9))),
                       ),
                       items: _itemList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -267,7 +267,7 @@ class _Mobile_Jatuh_TempoState extends State<Mobile_Jatuh_Tempo> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff6D28D9))),
                       ),
                       items: _payment
                           .map<DropdownMenuItem<String>>((String value) {
@@ -306,7 +306,7 @@ class _Mobile_Jatuh_TempoState extends State<Mobile_Jatuh_Tempo> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff6D28D9))),
                       ),
                       items: _typeList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -341,7 +341,7 @@ class _Mobile_Jatuh_TempoState extends State<Mobile_Jatuh_Tempo> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff6D28D9))),
                       ),
                       items: _activeList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -376,7 +376,7 @@ class _Mobile_Jatuh_TempoState extends State<Mobile_Jatuh_Tempo> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff6D28D9))),
                       ),
                       items: _cosignList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -400,7 +400,8 @@ class _Mobile_Jatuh_TempoState extends State<Mobile_Jatuh_Tempo> {
                     ? _showReport
                     : null,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.orange, // Ubah warna latar belakang
+                  backgroundColor:
+                      Color(0xff6D28D9), // Ubah warna latar belakang
                   // Ubah warna teks
                 ),
                 child: const Text('Lihat Laporan'),
@@ -504,7 +505,8 @@ class _TableExampleState extends State<TableExample> {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.orange, // Ubah warna latar belakang
+                  backgroundColor:
+                      Color(0xff6D28D9), // Ubah warna latar belakang
                   // Ubah warna teks
                 ),
                 onPressed: addRow,

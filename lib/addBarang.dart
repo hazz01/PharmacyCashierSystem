@@ -46,6 +46,11 @@ class _addBarangState extends State<addBarang> {
         title:
             const Text("Tambah Barang", style: TextStyle(color: Colors.white)),
         backgroundColor: Color(0xff4338CA),
+        actions: [
+          IconButton(
+              onPressed: () {}, icon: Icon(Icons.notifications_active_rounded)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.account_box_rounded)),
+        ],
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -85,7 +90,8 @@ class _addBarangState extends State<addBarang> {
                                 fontWeight: FontWeight.w500),
                           ),
                           focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.orange))),
+                              borderSide:
+                                  BorderSide(color: Color(0xff6D28D9)))),
                     ),
                   ),
                 ],
@@ -120,7 +126,7 @@ class _addBarangState extends State<addBarang> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff6D28D9))),
                       ),
                       items: _golonganList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -159,7 +165,8 @@ class _addBarangState extends State<addBarang> {
                                 fontWeight: FontWeight.w500),
                           ),
                           focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.orange))),
+                              borderSide:
+                                  BorderSide(color: Color(0xff6D28D9)))),
                     ),
                   ),
                 ],
@@ -191,7 +198,7 @@ class _addBarangState extends State<addBarang> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff6D28D9))),
                       ),
                       items: _kategoriList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -233,7 +240,7 @@ class _addBarangState extends State<addBarang> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff6D28D9))),
                       ),
                       items: _typeList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -272,7 +279,8 @@ class _addBarangState extends State<addBarang> {
                                 fontWeight: FontWeight.w500),
                           ),
                           focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.orange))),
+                              borderSide:
+                                  BorderSide(color: Color(0xff6D28D9)))),
                     ),
                   ),
                 ],
@@ -303,7 +311,8 @@ class _addBarangState extends State<addBarang> {
                                 fontWeight: FontWeight.w500),
                           ),
                           focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.orange))),
+                              borderSide:
+                                  BorderSide(color: Color(0xff6D28D9)))),
                     ),
                   ),
                 ],
@@ -334,7 +343,8 @@ class _addBarangState extends State<addBarang> {
                                 fontWeight: FontWeight.w500),
                           ),
                           focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.orange))),
+                              borderSide:
+                                  BorderSide(color: Color(0xff6D28D9)))),
                     ),
                   ),
                 ],
@@ -365,7 +375,8 @@ class _addBarangState extends State<addBarang> {
                                 fontWeight: FontWeight.w500),
                           ),
                           focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.orange))),
+                              borderSide:
+                                  BorderSide(color: Color(0xff6D28D9)))),
                     ),
                   ),
                 ],
@@ -396,7 +407,8 @@ class _addBarangState extends State<addBarang> {
                                 fontWeight: FontWeight.w500),
                           ),
                           focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.orange))),
+                              borderSide:
+                                  BorderSide(color: Color(0xff6D28D9)))),
                     ),
                   ),
                 ],
@@ -427,7 +439,8 @@ class _addBarangState extends State<addBarang> {
                                 fontWeight: FontWeight.w500),
                           ),
                           focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.orange))),
+                              borderSide:
+                                  BorderSide(color: Color(0xff6D28D9)))),
                     ),
                   ),
                 ],
@@ -462,7 +475,7 @@ class _addBarangState extends State<addBarang> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange)),
+                            borderSide: BorderSide(color: Color(0xff6D28D9))),
                       ),
                       items: _kons_type
                           .map<DropdownMenuItem<String>>((String value) {
@@ -486,7 +499,8 @@ class _addBarangState extends State<addBarang> {
                     ? _showReport
                     : null,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.orange, // Ubah warna latar belakang
+                  backgroundColor:
+                      Color(0xff6D28D9), // Ubah warna latar belakang
                   // Ubah warna teks
                 ),
                 child: const Text('Lihat Laporan'),

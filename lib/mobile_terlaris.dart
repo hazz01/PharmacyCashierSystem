@@ -53,9 +53,14 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         centerTitle: true,
-        title:
-            const Text("Flutter Bricks", style: TextStyle(color: Colors.white)),
+        title: const Text("Barang Terlaris",
+            style: TextStyle(color: Colors.white)),
         backgroundColor: Color(0xff4338CA),
+        actions: [
+          IconButton(
+              onPressed: () {}, icon: Icon(Icons.notifications_active_rounded)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.account_box_rounded)),
+        ],
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -362,7 +367,8 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                     ? _showReport
                     : null,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xff4338CA), // Ubah warna latar belakang
+                  backgroundColor:
+                      Color(0xff4338CA), // Ubah warna latar belakang
                   // Ubah warna teks
                 ),
                 child: const Text('Lihat Laporan'),
@@ -467,7 +473,8 @@ class _TableExampleState extends State<TableExample> {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xff4338CA), // Ubah warna latar belakang
+                  backgroundColor:
+                      Color(0xff4338CA), // Ubah warna latar belakang
                   // Ubah warna teks
                 ),
                 onPressed: addRow,
