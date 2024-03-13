@@ -1,3 +1,4 @@
+import 'package:apotek/addBarang.dart';
 import 'package:apotek/login.dart';
 import 'package:apotek/mobile_dashboard.dart';
 import 'package:apotek/mobile_jatuhtempo.dart';
@@ -82,7 +83,12 @@ class RootPage extends StatefulWidget {
 class _RootPageState extends State<RootPage> {
   int currentPage = 0;
   // List<Widget> pages = [LoginPage(),MobileTerlaris(), Mobile_Kosong()];
-  List<Widget> pages = [LoginPage(), Mobile_Dashboard(), MobileTerlaris()];
+  List<Widget> pages = [
+    LoginPage(),
+    Mobile_Dashboard(),
+    MobileTerlaris(),
+    addBarang()
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -292,7 +298,7 @@ class _BottomNavBarRaisedInsetFb1State
                       PageRouteBuilder(
                         transitionDuration: Duration.zero,
                         pageBuilder: (context, animation, secondaryAnimation) =>
-                            MobileTerlaris(),
+                            addBarang(),
                       ),
                     );
                   },
