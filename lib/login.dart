@@ -28,8 +28,8 @@ class _LoginPageState extends State<LoginPage> {
   // Controller for the text fields
   TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  bool _isButtonEnabled = false;
 
-  // Function to validate login
   void _validateLogin() {
     String enteredUsername = usernameController.text;
     String enteredPassword = passwordController.text;
@@ -71,9 +71,9 @@ class _LoginPageState extends State<LoginPage> {
                   height: 200.0,
                   width: 200.0,
                 ),
-        
+
                 // SizedBox(height: 10.0),
-        
+
                 // Selamat Datang!
                 const Text(
                   'Selamat Datang!',
@@ -82,31 +82,61 @@ class _LoginPageState extends State<LoginPage> {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-        
+
                 const Text(
                   'Masuk Untuk Melanjutkan',
                   style: TextStyle(fontSize: 16),
                 ),
-        
+
                 const SizedBox(height: 50.0),
-        
+
                 // [text field] Masukkan Email
                 TextField(
                   controller: usernameController,
-                  decoration: InputDecoration(labelText: 'Masukkan Username'),
+                  decoration: const InputDecoration(
+                    label: Text(
+                      'Masukkan Username',
+                      style: TextStyle(
+                          color: Colors.black54, fontWeight: FontWeight.w500),
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.orange),
+                    ),
+                  ),
+                  onChanged: (_) {
+                    setState(
+                      () {
+                        _isButtonEnabled = usernameController.text.isNotEmpty &&
+                            passwordController.text.isNotEmpty;
+                      },
+                    );
+                  },
                 ),
-        
+
                 const SizedBox(height: 10.0),
-        
+
                 // [text field] Masukkan Password
                 TextField(
                   controller: passwordController,
-                  decoration: InputDecoration(labelText: 'Masukkan Password'),
+                  decoration: const InputDecoration(
+                      label: Text(
+                        'Masukkan Password',
+                        style: TextStyle(
+                            color: Colors.black54, fontWeight: FontWeight.w500),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.orange))),
                   obscureText: true,
+                  onChanged: (_) {
+                    setState(() {
+                      _isButtonEnabled = usernameController.text.isNotEmpty &&
+                          passwordController.text.isNotEmpty;
+                    });
+                  },
                 ),
-        
+
                 const SizedBox(height: 20.0),
-        
+
                 // [CheckBox] Ingat Kata Sandi
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -126,49 +156,57 @@ class _LoginPageState extends State<LoginPage> {
                       onPressed: () {
                         // Ganti dengan logika sesuai kebutuhan
                       },
-                      child: const Text('Lupa Kata Sandi'),
+                      child: const Text(
+                        'Lupa Kata Sandi',
+                        style: TextStyle(color: Colors.orange),
+                      ),
                     ),
                   ],
                 ),
-        
+
                 const SizedBox(height: 10.0),
-        
+
                 // [Button] Lupa Kata Sandi
-        
+
                 const SizedBox(height: 20.0),
-        
+
                 // [Submit Button] Masuk
-                SizedBox(
-                  width: double.infinity,
-                  height: 40,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      _validateLogin();
-                    },
-                    child: const Text('Masuk', style: TextStyle(fontSize: 20),),
+                // SizedBox(
+                //   width: double.infinity,
+                //   height: 40,
+                //   child: ElevatedButton(
+                //     onPressed: () {
+                //       _validateLogin();
+                //     },
+                //     child: const Text('Masuk', style: TextStyle(fontSize: 20),),
+                //   ),
+                ElevatedButton(
+                  onPressed: _isButtonEnabled ? _validateLogin : null,
+                  child: const Text('Masuk'),
+                  style: ElevatedButton.styleFrom(
+                    primary: _isButtonEnabled ? Colors.orange : Colors.grey,
+                    // Change the button's color based on whether it's enabled or not
                   ),
                 ),
-                
-        
-                const SizedBox(height: 20.0),
-        
+
+                const SizedBox(height: 180.0),
+
                 // [Footer] Copyright 2024 Grounded Team. All Right Reserved
-                Positioned(
-              bottom: 10.0, // Set your desired bottom margin
-              left: 0,
-              right: 0,
-              child: Center(
-                child: Text(
-                  '© Copyright 2024 Grounded Team. All Right Reserved',
-                  style: TextStyle(fontSize: 12.0),
-                ),
-              ),)
+                const Positioned(
+                  bottom: 10.0, // Set your desired bottom margin
+                  left: 0,
+                  right: 0,
+                  child: Center(
+                    child: Text(
+                      '© Copyright 2024 Grounded Team. All Right Reserved',
+                      style: TextStyle(fontSize: 12.0),
+                    ),
+                  ),
+                )
               ],
             ),
           ),
-          
         ),
-        
       ),
     );
   }

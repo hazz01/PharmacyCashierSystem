@@ -1,4 +1,6 @@
 import 'package:apotek/main.dart';
+import 'package:apotek/mobile_jatuhtempo.dart';
+import 'package:apotek/mobile_kosong.dart';
 import 'package:apotek/mobile_terlaris.dart';
 import 'package:draggable_home/draggable_home.dart';
 import 'package:flutter/foundation.dart';
@@ -12,13 +14,10 @@ class Mobile_Dashboard extends StatefulWidget {
 }
 
 class _Mobile_DashboardState extends State<Mobile_Dashboard> {
-  
-
   int currentPage = 0;
   // List<Widget> pages = [Mobile_Dashboard(), MobileTerlaris()];
   @override
   Widget build(BuildContext context) {
-    
     return DraggableHome(
       leading: const Icon(Icons.arrow_back_ios),
       title: const Text("Dashboard"),
@@ -62,44 +61,45 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
     );
   }
 
-Widget headerWidget(BuildContext context) {
-  return Container(
-    decoration: BoxDecoration(
-      image: DecorationImage(
-        image: AssetImage('images/background.jpg'), // Ganti dengan path gambar Anda
-        fit: BoxFit.cover, // Atur sesuai kebutuhan (contohnya, sesuaikan atau perbesar gambar)
-        colorFilter: ColorFilter.mode(
-          Colors.black.withOpacity(0.4), // Sesuaikan tingkat kegelapan di sini
-          BlendMode.darken,
+  Widget headerWidget(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(
+              'images/background.jpg'), // Ganti dengan path gambar Anda
+          fit: BoxFit
+              .cover, // Atur sesuai kebutuhan (contohnya, sesuaikan atau perbesar gambar)
+          colorFilter: ColorFilter.mode(
+            Colors.black
+                .withOpacity(0.4), // Sesuaikan tingkat kegelapan di sini
+            BlendMode.darken,
+          ),
         ),
       ),
-    ),
-    child: Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            "74%",
-            style: Theme.of(context)
-                .textTheme
-                .displayMedium!
-                .copyWith(color: Colors.white),
-          ),
-          SizedBox(height: 8),
-          Text(
-            "pendapatan anda naik",
-            style: TextStyle(
-              color: Colors.white70,
-              fontSize: 12,
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "74%",
+              style: Theme.of(context)
+                  .textTheme
+                  .displayMedium!
+                  .copyWith(color: Colors.white),
             ),
-          ),
-        ],
+            SizedBox(height: 8),
+            Text(
+              "pendapatan anda naik",
+              style: TextStyle(
+                color: Colors.white70,
+                fontSize: 12,
+              ),
+            ),
+          ],
+        ),
       ),
-    ),
-  );
-}
-
-
+    );
+  }
 
   ListView listView() {
     return ListView.builder(
@@ -554,7 +554,13 @@ Widget headerWidget(BuildContext context) {
                           backgroundColor: Color(0xff4338CA),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5))),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Mobile_Jatuh_Tempo(),
+                            ));
+                      },
                       child: const Text.rich(
                         TextSpan(
                           text: ' See Details',
@@ -674,7 +680,13 @@ Widget headerWidget(BuildContext context) {
                           backgroundColor: Color(0xff4338CA),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5))),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Mobile_Kosong(),
+                            ));
+                      },
                       child: const Text.rich(
                         TextSpan(
                           text: ' See Details',
