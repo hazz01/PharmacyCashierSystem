@@ -100,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                           color: Colors.black54, fontWeight: FontWeight.w500),
                     ),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.orange),
+                      borderSide: BorderSide(color: Color(0xff4338CA)),
                     ),
                   ),
                   onChanged: (_) {
@@ -125,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
                             color: Colors.black54, fontWeight: FontWeight.w500),
                       ),
                       focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.orange))),
+                          borderSide: BorderSide(color: Color(0xff4338CA)))),
                   obscureText: true,
                   onChanged: (_) {
                     setState(() {
@@ -158,7 +158,7 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       child: const Text(
                         'Lupa Kata Sandi',
-                        style: TextStyle(color: Colors.orange),
+                        style: TextStyle(color: Color(0xff4338CA)),
                       ),
                     ),
                   ],
@@ -184,7 +184,7 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: _isButtonEnabled ? _validateLogin : null,
                   child: const Text('Masuk'),
                   style: ElevatedButton.styleFrom(
-                    primary: _isButtonEnabled ? Colors.orange : Colors.grey,
+                    primary: _isButtonEnabled ? Color(0xff4338CA) : Colors.grey,
                     // Change the button's color based on whether it's enabled or not
                   ),
                 ),

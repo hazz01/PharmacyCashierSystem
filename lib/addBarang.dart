@@ -41,7 +41,7 @@ class _addBarangState extends State<addBarang> {
     int currentPage = 0;
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        // automaticallyImplyLeading: false,
         centerTitle: true,
         title:
             const Text("Tambah Barang", style: TextStyle(color: Colors.white)),

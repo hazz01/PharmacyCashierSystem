@@ -1,4 +1,6 @@
+import 'package:apotek/addBarang.dart';
 import 'package:apotek/main.dart';
+import 'package:apotek/mobile_showdatabase.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -46,45 +48,88 @@ class _BarangState extends State<Barang> {
                   imageUrl:
                       "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/illustrations%2Fundraw_Working_late_re_0c3y%201.png?alt=media&token=7b880917-2390-4043-88e5-5d58a9d70555",
                   subtitle: "+30 books",
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                        transitionDuration: Duration.zero,
+                        pageBuilder: (context, animation, secondaryAnimation) =>
+                            addBarang(),
+                      ),
+                    );
+                  },
                 ),
                 CardFb2(
                   text: "Tambah Barang Kosong",
                   imageUrl:
                       "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/illustrations%2Fundraw_Working_late_re_0c3y%201.png?alt=media&token=7b880917-2390-4043-88e5-5d58a9d70555",
                   subtitle: "+30 books",
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                        transitionDuration: Duration.zero,
+                        pageBuilder: (context, animation, secondaryAnimation) =>
+                            addBarang(),
+                      ),
+                    );
+                  },
                 ),
                 CardFb2(
                   text: "Tambah Item Terlatris",
                   imageUrl:
                       "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/illustrations%2Fundraw_Working_late_re_0c3y%201.png?alt=media&token=7b880917-2390-4043-88e5-5d58a9d70555",
                   subtitle: "+30 books",
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                        transitionDuration: Duration.zero,
+                        pageBuilder: (context, animation, secondaryAnimation) =>
+                            addBarang(),
+                      ),
+                    );
+                  },
                 ),
                 CardFb2(
                   text: "Tambah Tagihan Jatuh Tempo",
                   imageUrl:
                       "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/illustrations%2Fundraw_Working_late_re_0c3y%201.png?alt=media&token=7b880917-2390-4043-88e5-5d58a9d70555",
                   subtitle: "+30 books",
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                        transitionDuration: Duration.zero,
+                        pageBuilder: (context, animation, secondaryAnimation) =>
+                            addBarang(),
+                      ),
+                    );
+                  },
                 ),
-                CardFb2(
-                  text: "Lorem Ipsum",
-                  imageUrl:
-                      "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/illustrations%2Fundraw_Working_late_re_0c3y%201.png?alt=media&token=7b880917-2390-4043-88e5-5d58a9d70555",
-                  subtitle: "+30 books",
-                  onPressed: () {},
-                ),
+      
               ],
             ),
             SizedBox(height: 40,),
-            Container(
-              child: RoundedBadge(title:"Lihat Database", icon: Icon(
-              Icons.data_usage_rounded,
-              color: Colors.white,
-              size: 20,
-            ),)
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                        transitionDuration: Duration.zero,
+                        pageBuilder: (context, animation, secondaryAnimation) =>
+                            ShowDatabase(),
+                      ),
+                    );
+              },
+              child: Container(
+                child: RoundedBadge(title:"Lihat Database", icon: Icon(
+                Icons.data_usage_rounded,
+                color: Colors.white,
+                size: 20,
+                
+              ),)
+              ),
             )
           ],
         )),

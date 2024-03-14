@@ -63,10 +63,10 @@ class _ShowDatabaseState extends State<ShowDatabase> {
 
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        // automaticallyImplyLeading: false,
         centerTitle: true,
         title:
-            const Text("Main Databases", style: TextStyle(color: Colors.white)),
+          const Text("Main Databases", style: TextStyle(color: Colors.white)),
         backgroundColor: Color(0xff4338CA),
         flexibleSpace: Container(
           decoration: const BoxDecoration(

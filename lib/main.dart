@@ -228,7 +228,7 @@ class _BottomNavBarRaisedInsetFb1State
               children: [
                 NavBarIcon(
                   text: "Home",
-                  icon: Icons.donut_small_sharp,
+                  icon: Icons.lightbulb,
                   selected: widget.onPageChanged == 1,
                   onPressed: () {
                     setState(() {
@@ -250,7 +250,7 @@ class _BottomNavBarRaisedInsetFb1State
                 ),
                 NavBarIcon(
                   text: "Search",
-                  icon: Icons.local_grocery_store_outlined,
+                  icon: Icons.do_not_disturb_alt_outlined,
                   selected: widget.onPageChanged == 2,
                   onPressed: () {
                     setState(() {
@@ -261,7 +261,7 @@ class _BottomNavBarRaisedInsetFb1State
                       PageRouteBuilder(
                         transitionDuration: Duration.zero,
                         pageBuilder: (context, animation, secondaryAnimation) =>
-                            ShowDatabase(),
+                            Mobile_Kosong(),
                       ),
                     );
                   },
@@ -271,7 +271,7 @@ class _BottomNavBarRaisedInsetFb1State
                 const SizedBox(width: 56),
                 NavBarIcon(
                     text: "Cart",
-                    icon: Icons.notifications_none,
+                    icon: Icons.money_off_csred,
                     selected: widget.onPageChanged == 4,
                     onPressed: () {
                       setState(() {
@@ -291,7 +291,7 @@ class _BottomNavBarRaisedInsetFb1State
                     selectedColor: primaryColor),
                 NavBarIcon(
                   text: "Calendar",
-                  icon: Icons.account_circle_outlined,
+                  icon: Icons.perm_data_setting,
                   selected: widget.onPageChanged == 5,
                   onPressed: () {
                     setState(() {
@@ -302,7 +302,7 @@ class _BottomNavBarRaisedInsetFb1State
                       PageRouteBuilder(
                         transitionDuration: Duration.zero,
                         pageBuilder: (context, animation, secondaryAnimation) =>
-                            addBarang(),
+                            Barang(),
                       ),
                     );
                   },
