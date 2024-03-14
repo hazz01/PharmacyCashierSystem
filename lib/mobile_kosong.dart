@@ -93,7 +93,7 @@ class _Mobile_KosongState extends State<Mobile_Kosong> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xff4338CA))),
+                            borderSide: BorderSide(color: Colors.orange)),
                       ),
                       items: _kategoriList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -135,7 +135,7 @@ class _Mobile_KosongState extends State<Mobile_Kosong> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xff4338CA))),
+                            borderSide: BorderSide(color: Colors.orange)),
                       ),
                       items: _golonganList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -184,7 +184,7 @@ class _Mobile_KosongState extends State<Mobile_Kosong> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xff4338CA))),
+                            borderSide: BorderSide(color: Colors.orange)),
                         labelText: 'Tanggal',
                         border: OutlineInputBorder(),
                         labelStyle: TextStyle(
@@ -225,7 +225,7 @@ class _Mobile_KosongState extends State<Mobile_Kosong> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xff4338CA))),
+                            borderSide: BorderSide(color: Colors.orange)),
                       ),
                       items: _itemList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -264,7 +264,7 @@ class _Mobile_KosongState extends State<Mobile_Kosong> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xff4338CA))),
+                            borderSide: BorderSide(color: Colors.orange)),
                       ),
                       items: _typeList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -299,7 +299,7 @@ class _Mobile_KosongState extends State<Mobile_Kosong> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xff4338CA))),
+                            borderSide: BorderSide(color: Colors.orange)),
                       ),
                       items: _activeList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -334,7 +334,7 @@ class _Mobile_KosongState extends State<Mobile_Kosong> {
                       },
                       decoration: const InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xff4338CA))),
+                            borderSide: BorderSide(color: Colors.orange)),
                       ),
                       items: _cosignList
                           .map<DropdownMenuItem<String>>((String value) {
@@ -358,7 +358,7 @@ class _Mobile_KosongState extends State<Mobile_Kosong> {
                     ? _showReport
                     : null,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xff4338CA), // Ubah warna latar belakang
+                  backgroundColor: Colors.orange, // Ubah warna latar belakang
                   // Ubah warna teks
                 ),
                 child: const Text('Lihat Laporan'),
@@ -462,7 +462,7 @@ class _TableExampleState extends State<TableExample> {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xff4338CA), // Ubah warna latar belakang
+                  backgroundColor: Colors.orange, // Ubah warna latar belakang
                   // Ubah warna teks
                 ),
                 onPressed: addRow,
