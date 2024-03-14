@@ -402,18 +402,20 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
                       DataRow(cells: [
                         DataCell(
                             Text('Barang 1', style: TextStyle(fontSize: 10))),
-                        DataCell(Text('Jumlah', style: TextStyle(fontSize: 10))),
+                        DataCell(
+                            Text('Jumlah', style: TextStyle(fontSize: 10))),
                         DataCell(
                             Text('Rp 25.000', style: TextStyle(fontSize: 10))),
                       ]),
                       DataRow(cells: [
                         DataCell(
                             Text('Barang 2', style: TextStyle(fontSize: 10))),
-                        DataCell(Text('Jumlah', style: TextStyle(fontSize: 10))),
+                        DataCell(
+                            Text('Jumlah', style: TextStyle(fontSize: 10))),
                         DataCell(
                             Text('Rp 50.000', style: TextStyle(fontSize: 10))),
                       ]),
-                
+
                       // Tambahkan baris lain sesuai kebutuhan
                     ],
                   ),
@@ -536,11 +538,12 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
                       DataRow(cells: [
                         DataCell(
                             Text('Tagihan 2', style: TextStyle(fontSize: 10))),
-                        DataCell(Text('Jumlah', style: TextStyle(fontSize: 10))),
+                        DataCell(
+                            Text('Jumlah', style: TextStyle(fontSize: 10))),
                         DataCell(
                             Text('20/12/2022', style: TextStyle(fontSize: 10))),
                       ]),
-                
+
                       // Tambahkan baris lain sesuai kebutuhan
                     ],
                   ),
@@ -666,7 +669,7 @@ class _Mobile_DashboardState extends State<Mobile_Dashboard> {
                         DataCell(
                             Text('20/12/2022', style: TextStyle(fontSize: 10))),
                       ]),
-                
+
                       // Tambahkan baris lain sesuai kebutuhan
                     ],
                   ),

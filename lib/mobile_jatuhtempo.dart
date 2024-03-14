@@ -400,7 +400,8 @@ class _Mobile_Jatuh_TempoState extends State<Mobile_Jatuh_Tempo> {
                     ? _showReport
                     : null,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xff4338CA), // Ubah warna latar belakang
+                  backgroundColor:
+                      Color(0xff4338CA), // Ubah warna latar belakang
                   // Ubah warna teks
                 ),
                 child: const Text('Lihat Laporan'),
@@ -504,7 +505,8 @@ class _TableExampleState extends State<TableExample> {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.orange, // Ubah warna latar belakang
+                  backgroundColor:
+                      Color(0xff4338CA), // Ubah warna latar belakang
                   // Ubah warna teks
                 ),
                 onPressed: addRow,
