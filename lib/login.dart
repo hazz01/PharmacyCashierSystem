@@ -1,6 +1,7 @@
 import 'package:apotek/mobile_dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:footer/footer.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(MyApp());
 
@@ -44,6 +45,41 @@ class _LoginPageState extends State<LoginPage> {
       );
       print('Login Berhasil');
     } else {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+              content: InfoBannerActionsFb1(
+            primaryColor: Color(0xff4338CA),
+            text:
+                "Login failed. Please check your username or password. If there is an error, try contacting the admin",
+            actions: [
+              TextButton(
+                child: const Text(
+                  'CONTACT ADMIN',
+                  style: TextStyle(color: Color(0xff4338CA)),
+                ),
+                onPressed: () {
+                  launch('https://wa.me/6289623084881');
+                },
+              ),
+              TextButton(
+                child: const Text(
+                  'DISMISS',
+                  style: TextStyle(color: Color(0xff4338CA)),
+                ),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+            icon: Icon(
+              Icons.sms_failed_outlined,
+              color: Colors.white,
+            ),
+          ));
+        },
+      );
       print('Login Gagal');
       print('Username: $enteredUsername');
       print('Password: $enteredPassword');
@@ -154,7 +190,41 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     TextButton(
                       onPressed: () {
-                        // Ganti dengan logika sesuai kebutuhan
+                        showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                                content: InfoBannerActionsFb1(
+                              primaryColor: Color(0xff4338CA),
+                              text:
+                                  "Please contact admin if you forget your password",
+                              actions: [
+                                TextButton(
+                                  child: const Text(
+                                    'CONTACT ADMIN',
+                                    style: TextStyle(color: Color(0xff4338CA)),
+                                  ),
+                                  onPressed: () {
+                                    _launchURL();
+                                  },
+                                ),
+                                TextButton(
+                                  child: const Text(
+                                    'DISMISS',
+                                    style: TextStyle(color: Color(0xff4338CA)),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                ),
+                              ],
+                              icon: Icon(
+                                Icons.contact_phone_rounded,
+                                color: Colors.white,
+                              ),
+                            ));
+                          },
+                        );
                       },
                       child: const Text(
                         'Lupa Kata Sandi',
@@ -180,12 +250,16 @@ class _LoginPageState extends State<LoginPage> {
                 //     },
                 //     child: const Text('Masuk', style: TextStyle(fontSize: 20),),
                 //   ),
-                ElevatedButton(
-                  onPressed: _isButtonEnabled ? _validateLogin : null,
-                  child: const Text('Masuk'),
-                  style: ElevatedButton.styleFrom(
-                    primary: _isButtonEnabled ? Color(0xff4338CA) : Colors.grey,
-                    // Change the button's color based on whether it's enabled or not
+                Container(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: _isButtonEnabled ? _validateLogin : null,
+                    child: const Text('Masuk'),
+                    style: ElevatedButton.styleFrom(
+                      primary:
+                          _isButtonEnabled ? Color(0xff4338CA) : Colors.grey,
+                      // Change the button's color based on whether it's enabled or not
+                    ),
                   ),
                 ),
 
@@ -209,5 +283,47 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+  }
+}
+
+class InfoBannerActionsFb1 extends StatelessWidget {
+  final Icon icon;
+  final Color primaryColor;
+  final List<TextButton> actions;
+  final String text;
+
+  const InfoBannerActionsFb1(
+      {required this.icon,
+      required this.actions,
+      required this.text,
+      this.primaryColor = Colors.blue,
+      Key? key})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: MaterialBanner(
+        content: Text(
+          text,
+          style: TextStyle(color: primaryColor),
+        ),
+        leading: CircleAvatar(
+          child: icon,
+          backgroundColor: primaryColor,
+        ),
+        actions: actions,
+      ),
+    );
+  }
+}
+
+_launchURL() async {
+  final Uri url = Uri.parse('https://wa.me/6289623084881');
+  if (!await launchUrl(url)) {
+    throw Exception('Could not launch https://wa.me/6289623084881');
+    print('yahaha admin error');
+  } else {
+    print('gak masuk logika bjir');
   }
 }

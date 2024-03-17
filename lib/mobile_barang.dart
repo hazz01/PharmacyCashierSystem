@@ -47,7 +47,7 @@ class _BarangState extends State<Barang> {
                   text: "Tambah Database Barang",
                   imageUrl:
                       "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/illustrations%2Fundraw_Working_late_re_0c3y%201.png?alt=media&token=7b880917-2390-4043-88e5-5d58a9d70555",
-                  subtitle: "+30 books",
+                  // subtitle: "+30 books",
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -63,7 +63,7 @@ class _BarangState extends State<Barang> {
                   text: "Tambah Barang Kosong",
                   imageUrl:
                       "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/illustrations%2Fundraw_Working_late_re_0c3y%201.png?alt=media&token=7b880917-2390-4043-88e5-5d58a9d70555",
-                  subtitle: "+30 books",
+                  // subtitle: "+30 books",
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -79,7 +79,7 @@ class _BarangState extends State<Barang> {
                   text: "Tambah Item Terlatris",
                   imageUrl:
                       "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/illustrations%2Fundraw_Working_late_re_0c3y%201.png?alt=media&token=7b880917-2390-4043-88e5-5d58a9d70555",
-                  subtitle: "+30 books",
+                  // subtitle: "+30 books",
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -95,7 +95,7 @@ class _BarangState extends State<Barang> {
                   text: "Tambah Tagihan Jatuh Tempo",
                   imageUrl:
                       "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/illustrations%2Fundraw_Working_late_re_0c3y%201.png?alt=media&token=7b880917-2390-4043-88e5-5d58a9d70555",
-                  subtitle: "+30 books",
+                  // subtitle: "+30 books",
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -152,13 +152,13 @@ class _BarangState extends State<Barang> {
 class CardFb2 extends StatelessWidget {
   final String text;
   final String imageUrl;
-  final String subtitle;
+  // final String subtitle;
   final Function() onPressed;
 
   const CardFb2(
       {required this.text,
       required this.imageUrl,
-      required this.subtitle,
+      // required this.subtitle,
       required this.onPressed,
       Key? key})
       : super(key: key);
@@ -196,14 +196,14 @@ class CardFb2 extends StatelessWidget {
                   fontSize: 18,
                 )),
             const Spacer(),
-            Text(
-              subtitle,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                  color: Colors.grey,
-                  fontWeight: FontWeight.normal,
-                  fontSize: 12),
-            ),
+            // Text(
+            //   subtitle,
+            //   textAlign: TextAlign.center,
+            //   style: const TextStyle(
+            //       color: Colors.grey,
+            //       fontWeight: FontWeight.normal,
+            //       fontSize: 12),
+            // ),
           ],
         ),
       ),

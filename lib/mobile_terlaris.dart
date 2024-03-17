@@ -56,11 +56,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
         title: const Text("Barang Terlaris",
             style: TextStyle(color: Colors.white)),
         backgroundColor: Color(0xff4338CA),
-        actions: [
-          IconButton(
-              onPressed: () {}, icon: Icon(Icons.notifications_active_rounded)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.account_box_rounded)),
-        ],
+       
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -257,7 +253,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                   //   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
                   // ),
                   const SizedBox(
-                    width: 18,
+                    // width: 1,
                   ),
                   Expanded(
                     child: DropdownButtonFormField<String>(
@@ -265,6 +261,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                           color: Colors.black54,
                           fontSize: 16,
                           fontWeight: FontWeight.w500),
+                    
                       value: _selectedType,
                       onChanged: (String? newValue) {
                         setState(() {
@@ -292,7 +289,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                   //   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
                   // ),
                   const SizedBox(
-                    width: 18,
+                    width: 15,
                   ),
                   Expanded(
                     child: DropdownButtonFormField<String>(
@@ -327,7 +324,7 @@ class _MobileTerlarisState extends State<MobileTerlaris> {
                   //   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
                   // ),
                   const SizedBox(
-                    width: 18,
+                    width: 15,
                   ),
                   Expanded(
                     child: DropdownButtonFormField<String>(

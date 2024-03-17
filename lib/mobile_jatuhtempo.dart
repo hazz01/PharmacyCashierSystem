@@ -55,11 +55,7 @@ class _Mobile_Jatuh_TempoState extends State<Mobile_Jatuh_Tempo> {
         automaticallyImplyLeading: false,
         centerTitle: true,
         backgroundColor: Color(0xff4338CA),
-        actions: [
-          IconButton(
-              onPressed: () {}, icon: Icon(Icons.notifications_active_rounded)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.account_box_rounded)),
-        ],
+        
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -288,10 +284,7 @@ class _Mobile_Jatuh_TempoState extends State<Mobile_Jatuh_Tempo> {
                   // const Text(
                   //   'Type: ',
                   //   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
-                  // ),
-                  const SizedBox(
-                    width: 18,
-                  ),
+                  // 
                   Expanded(
                     child: DropdownButtonFormField<String>(
                       style: const TextStyle(
@@ -325,7 +318,7 @@ class _Mobile_Jatuh_TempoState extends State<Mobile_Jatuh_Tempo> {
                   //   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
                   // ),
                   const SizedBox(
-                    width: 18,
+                    width: 15,
                   ),
                   Expanded(
                     child: DropdownButtonFormField<String>(
@@ -360,7 +353,7 @@ class _Mobile_Jatuh_TempoState extends State<Mobile_Jatuh_Tempo> {
                   //   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
                   // ),
                   const SizedBox(
-                    width: 18,
+                    width: 15,
                   ),
                   Expanded(
                     child: DropdownButtonFormField<String>(
@@ -504,7 +497,7 @@ class _TableExampleState extends State<TableExample> {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.orange, // Ubah warna latar belakang
+                  backgroundColor: Color(0xff4338CA), // Ubah warna latar belakang
                   // Ubah warna teks
                 ),
                 onPressed: addRow,
