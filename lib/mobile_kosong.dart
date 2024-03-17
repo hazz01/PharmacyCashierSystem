@@ -351,7 +351,7 @@ class _Mobile_KosongState extends State<Mobile_Kosong> {
                     ? _showReport
                     : null,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xff4338CA), // Ubah warna latar belakang
+                  backgroundColor: Colors.orange, // Ubah warna latar belakang
                   // Ubah warna teks
                 ),
                 child: const Text('Lihat Laporan'),
@@ -455,7 +455,7 @@ class _TableExampleState extends State<TableExample> {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xff4338CA), // Ubah warna latar belakang
+                  backgroundColor: Colors.orange, // Ubah warna latar belakang
                   // Ubah warna teks
                 ),
                 onPressed: addRow,
